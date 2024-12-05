@@ -2,7 +2,10 @@ interface LoadingProps {
   setPage: (value: number) => void;
 }
 
-const Loading: React.FC<LoadingProps> = () => {
+const Loading: React.FC<LoadingProps> = ({ setPage }) => {
+  setTimeout(() => {
+    setPage(1);
+  }, 3000);
 
   return (
     <div className="relative w-full min-h-screen flex flex-col justify-center items-center">
@@ -18,7 +21,7 @@ const Loading: React.FC<LoadingProps> = () => {
         alt=""
       />
     </div>
-  )
+  );
 };
 
 export default Loading;
