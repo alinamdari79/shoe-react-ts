@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router";
+
 interface FullFillPageProps {
   setPage: (value: number) => void;
 }
 const FullFillPage: React.FC<FullFillPageProps> = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full h-screen flex flex-col items-center ">
       <div className="w-[430px] h-[60%]">
@@ -20,7 +23,7 @@ const FullFillPage: React.FC<FullFillPageProps> = () => {
           <div className="w-8 h-1 bg-black opacity-50"></div>
           <div className="w-8 h-1 bg-black"></div>
         </div>
-        <button className="bg-black hover:bg-gray-800 rounded-full text-white w-full py-3 absolute bottom-8">
+        <button onClick={() => navigate('/login')} className="bg-black hover:bg-gray-800 rounded-full text-white w-full py-3 absolute bottom-8">
           Get Started
         </button>
       </div>
