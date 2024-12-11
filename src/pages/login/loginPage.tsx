@@ -1,8 +1,12 @@
+import { Link } from "react-router";
+
 const LoginPage = () => {
   return (
     <>
       <div className="p-5">
-        <img src="/src/assets/icons/back-icon.svg" alt="back-icon" />
+        <Link to="/">
+          <img src="/src/assets/icons/back-icon.svg" alt="back-icon" />
+        </Link>
         <div className="flex flex-col items-center">
           <img
             src="/src/assets/icons/Vector2.svg"
@@ -29,11 +33,22 @@ const LoginPage = () => {
               className=""
             />
           </div>
-          <div className="mt-10">
-            <input type="checkbox" name="checkbox" />
-            <label htmlFor="checkbox" className="ml-2">Remember Me</label>
+          <div className="flex justify-between gap-16 mt-3">
+            <Link to="/">Forgot Password?</Link>
+            <div>
+              <input type="checkbox" name="checkbox" />
+              <label htmlFor="checkbox" className="ml-2">
+                Remember Me
+              </label>
+            </div>
           </div>
-          <button className="w-full h-[47px] mt-[220px] rounded-[30px] bg-[#212529] text-white">Sign In</button>
+          <button className="w-full h-[47px] mt-[220px] rounded-[30px] bg-[#212529] text-white">
+            Sign In
+          </button>
+          <div className="flex justify-between gap-8 mt-3 text-lg">
+            <span className="text-[#6C757D]">Don’t have an account?</span>
+            <Link to="/">Register Now</Link>
+          </div>
         </div>
       </div>
     </>
