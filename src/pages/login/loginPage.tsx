@@ -16,16 +16,16 @@ const LoginPage = () => {
           <h1 className="font-semibold text-3xl mt-[118px]">
             Login to Your Account
           </h1>
-          <div className="w-[380px] h-[37px] border-2 border-[#6C757D] rounded px-2 flex gap-2 mt-12">
+          <div className="w-[380px] h-[37px] border-2 border-[#6C757D] rounded px-2 flex gap-2 mt-12 bg-[#FAFAFA]">
             <img src="/src/assets/icons/email-icon.svg" alt="email-icon" />
-            <input type="text" placeholder="Email" className="w-full px-2" />
+            <input type="text" placeholder="Email" className="w-full px-2 bg-[#FAFAFA]" />
           </div>
-          <div className="w-[380px] h-[37px] border-2 border-[#6C757D] rounded px-2 flex gap-2 mt-[29px]">
+          <div className="w-[380px] h-[37px] border-2 border-[#6C757D] rounded px-2 flex gap-2 mt-[29px] bg-[#FAFAFA]">
             <img src="/src/assets/icons/lock-icon.svg" alt="lock-icon" />
             <input
               type="password"
               placeholder="Password"
-              className="w-full px-2"
+              className="w-full px-2 bg-[#FAFAFA]"
             />
             <img
               src="/src/assets/icons/eye-slash-icon.svg"
@@ -47,7 +47,7 @@ const LoginPage = () => {
           </button>
           <div className="flex justify-between gap-8 mt-3 text-lg">
             <span className="text-[#6C757D]">Don’t have an account?</span>
-            <Link to="/">Register Now</Link>
+            <Link to="/sign-up">Register Now</Link>
           </div>
         </div>
       </div>
